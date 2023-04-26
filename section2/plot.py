@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv('final_crime_data.csv')
+data = pd.read_csv('final_data.csv')
 
 import matplotlib.pyplot as plt
 
