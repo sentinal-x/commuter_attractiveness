@@ -1,7 +1,4 @@
-import sys
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 from scaling import analysis
 
 models = {'lognormal_delta_fixed': analysis.LogNormalFixedDAnalysis,
@@ -26,7 +23,7 @@ inbound = final_data['c_in'].tolist()
 # Commute Impact Factor (a x p)
 cif = (final_data['Attractiveness'] * final_data['Population']).tolist()
 
-x_values = [('Population', p)]
+x_values = [('Attractiveness', a),('Population', p),('Inbound Commuters', inbound),('Commute Impact Factor (a x p)',cif)]
 
 cda = final_data['Criminal Damage and Arson'].tolist()
 cod = final_data['Crimes Of Dishonesty'].tolist()
@@ -35,9 +32,9 @@ vio = final_data['Violence'].tolist()
 oc = final_data['Other'].tolist()
 total = final_data['Total'].tolist()
 
-y_values = [('Other Crimes', oc), ('Total Crimes', total)]
+y_values = [('Criminal Damage and Arson', cda), ('Crimes Of Dishonesty', cod), ('Sexual Offences', so), ('Violence', vio), ('Other Crimes', oc), ('Total Crimes', total)]
 
-i = 10
+i = 0
 key = []
 for x in x_values:
     for y in y_values:
@@ -74,4 +71,4 @@ for x in x_values:
         i += 1
 
 key_df = pd.DataFrame(key)
-#key_df.to_csv('relationship_key.csv', index=False)
+key_df.to_csv('relationship_key.csv', index=False)

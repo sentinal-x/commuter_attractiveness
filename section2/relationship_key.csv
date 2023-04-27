@@ -1,4 +1,16 @@
 key,relationship,best_model
+0,Attractiveness against Criminal Damage and Arson,lognormal_delta_fixed
+1,Attractiveness against Crimes Of Dishonesty,lognormal
+2,Attractiveness against Sexual Offences,lognormal_delta_fixed
+3,Attractiveness against Violence,lognormal
+4,Attractiveness against Other Crimes,lognormal_delta_fixed
+5,Attractiveness against Total Crimes,lognormal
+6,Population against Criminal Damage and Arson,lognormal_delta_fixed
+7,Population against Crimes Of Dishonesty,lognormal_delta_fixed
+8,Population against Sexual Offences,lognormal_delta_fixed
+9,Population against Violence,gaussian
+10,Population against Other Crimes,lognormal_delta_fixed
+11,Population against Total Crimes,lognormal_delta_fixed
 12,Inbound Commuters against Criminal Damage and Arson,lognormal_delta_fixed
 13,Inbound Commuters against Crimes Of Dishonesty,lognormal_delta_fixed
 14,Inbound Commuters against Sexual Offences,lognormal_delta_fixed
