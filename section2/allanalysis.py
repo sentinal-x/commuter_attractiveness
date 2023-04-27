@@ -26,7 +26,7 @@ inbound = final_data['c_in'].tolist()
 # Commute Impact Factor (a x p)
 cif = (final_data['Attractiveness'] * final_data['Population']).tolist()
 
-x_values = [('Attractiveness', a),('Population', p),('Inbound Commuters', inbound),('Commute Impact Factor (a x p)',cif)]
+x_values = [('Population', p)]
 
 cda = final_data['Criminal Damage and Arson'].tolist()
 cod = final_data['Crimes Of Dishonesty'].tolist()
@@ -35,14 +35,15 @@ vio = final_data['Violence'].tolist()
 oc = final_data['Other'].tolist()
 total = final_data['Total'].tolist()
 
-y_values = [('Criminal Damage and Arson', cda), ('Crimes Of Dishonesty', cod), ('Sexual Offences', so), ('Violence', vio), ('Other Crimes', oc), ('Total Crimes', total)]
+y_values = [('Other Crimes', oc), ('Total Crimes', total)]
 
-i = 0
-key_df = pd.DataFrame(columns=['key', 'relationship'])
+i = 10
+key = []
 for x in x_values:
     for y in y_values:
         data_xy = (x[1], y[1])
         relationship = (x[0]+' against '+y[0])
+        print(str(i) + ': ' + relationship)
         results = []
         for m in models:
             model = models[m]
@@ -57,18 +58,20 @@ for x in x_values:
                 'Beta_CI': beta_ci,
                 'BIC': bic,
                 'P_Value': pv,
-                'Param1': params[0],
-                'Param2': params[1],
-                'Param3': params[2],
-                'Param4': params[3],
+                'Param1': params[0] if len(params) >= 1 else "",
+                'Param2': params[1] if len(params) >= 2 else "",
+                'Param3': params[2] if len(params) >= 3 else "",
+                'Param4': params[3] if len(params) >= 4 else "",
             }
             results.append(row)
             print(row)
 
         df = pd.DataFrame(results)
         sorted_df = df.sort_values(by='BIC')
-        sorted_df.to_csv((i+'.csv'), index=False)
-        key_df.append({'key': i, 'relationship': relationship}, ignore_index=True)
+        sorted_df.to_csv((str(i)+'.csv'), index=False)
+        best_model = sorted_df.loc[0, 'Model']
+        key.append({'key': str(i), 'relationship': relationship, 'best_model': best_model})
         i += 1
 
-key_df.to_csv('relationship_key.csv', index=False)
+key_df = pd.DataFrame(key)
+#key_df.to_csv('relationship_key.csv', index=False)

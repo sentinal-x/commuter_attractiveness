@@ -1,0 +1,13 @@
+key,relationship,best_model
+12,Inbound Commuters against Criminal Damage and Arson,lognormal_delta_fixed
+13,Inbound Commuters against Crimes Of Dishonesty,lognormal_delta_fixed
+14,Inbound Commuters against Sexual Offences,lognormal_delta_fixed
+15,Inbound Commuters against Violence,lognormal_delta_fixed
+16,Inbound Commuters against Other Crimes,lognormal_delta_fixed
+17,Inbound Commuters against Total Crimes,lognormal_delta_fixed
+18,Commute Impact Factor (a x p) against Criminal Damage and Arson,lognormal_delta_fixed
+19,Commute Impact Factor (a x p) against Crimes Of Dishonesty,lognormal_delta_fixed
+20,Commute Impact Factor (a x p) against Sexual Offences,lognormal_delta_fixed
+21,Commute Impact Factor (a x p) against Violence,lognormal_delta_fixed
+22,Commute Impact Factor (a x p) against Other Crimes,lognormal_delta_fixed
+23,Commute Impact Factor (a x p) against Total Crimes,lognormal_delta_fixed
