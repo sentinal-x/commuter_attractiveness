@@ -1,0 +1,60 @@
+Community 1: Barking and Dagenham, Barnet, Bexley, Sevenoaks, Bromley, Camden, Croydon, Brent, Gravesham, Greenwich, Hackney, London, Hammersmith and Fulham, Haringey, London, Harrow, Elmbridge, Surrey, Havering, London, Epsom and Ewell, Islington, Reigate and Banstead, Kingston upon Thames, Kensington and Chelsea, Lewisham, Merton, Newham, Redbridge, Lambeth, Southwark, Sutton, Tower Hamlets, London, Tandridge, Wandsworth, Westminster City of London, Waltham Forest, Richmond upon Thames, Woking, Ealing, Enfield, Thurrock, Brentwood, Epping Forest, Harlow, Uttlesford, Broxbourne, East Hertfordshire, Hertsmere, Hillingdon, Hounslow, Guildford, Mole Valley, Runnymede, Spelthorne, Waverley, Surrey, Dartford
+Community 2: Hartlepool, Middlesbrough, Redcar and Cleveland, Stockton-on-Tees
+Community 3: Darlington, County Durham, Northumberland, Gateshead, Newcastle upon Tyne, North Tyneside, South Tyneside, Sunderland
+Community 4: Fylde, Wyre, Lancashire, Blackpool
+Community 5: Allerdale, Copeland
+Community 6: Barrow-in-Furness, Lancaster, South Lakeland
+Community 7: Dumfries and Galloway, Carlisle, Eden
+Community 8: Burnley, Hyndburn, Pendle, Blackburn with Darwen, Ribble Valley
+Community 9: South Ribble, Preston, Chorley
+Community 10: Rossendale, Bolton, Bury, Manchester, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford, Wigan, Flintshire, Wrexham, St. Helens, Conwy, Halton, Warrington, Denbighshire, Cheshire East, High Peak, Cheshire West and Chester
+Community 11: Sefton, West Lancashire, Wirral, Knowsley, Liverpool
+Community 12: Kingston upon Hull, East Riding of Yorkshire
+Community 13: North East Lincolnshire, North Lincolnshire
+Community 14: Doncaster, Rotherham, Sheffield, North East Derbyshire, Bassetlaw, Chesterfield, Barnsley
+Community 15: Bradford, Calderdale, Kirklees, Leeds, Wakefield, York, Craven, Hambleton, Harrogate, Richmondshire, Ryedale, Scarborough, Selby
+Community 16: Blaby, Charnwood, Harborough, Hinckley and Bosworth, Melton, Leicester, Oadby and Wigston
+Community 17: West Lindsey, Boston, East Lindsey, Lincoln, North Kesteven
+Community 18: South Kesteven, Fenland, Rutland, Peterborough, South Holland
+Community 19: Corby, Daventry, East Northamptonshire, Kettering, Northampton, South Northamptonshire, Wellingborough
+Community 20: Derby, Ashfield, Nottingham, Gedling, Mansfield, Broxtowe, Newark and Sherwood, Erewash, Rushcliffe, Amber Valley, South Derbyshire, Bolsover, East Staffordshire, Derbyshire Dales, North 
+West Leicestershire
+Community 21: Powys, Telford and Wrekin, Shropshire
+Community 22: Stafford, Stoke-on-Trent, Staffordshire Moorlands, Newcastle-under-Lyme
+Community 23: Warwick, Coventry, Nuneaton and Bedworth, Rugby, Stratford-on-Avon
+Community 24: Herefordshire, Malvern Hills, Worcester, Wychavon
+Community 25: Bromsgrove, Redditch, Wyre Forest, Birmingham, Dudley, Sandwell, Solihull, Walsall, Wolverhampton, Cannock Chase, Lichfield, South Staffordshire, Tamworth, North Warwickshire
+Community 26: Maldon, Rochford, Tendring, Southend-on-Sea, Basildon, Braintree, Castle Point, Chelmsford, Colchester
+Community 27: Milton Keynes, Dacorum, Aylesbury Vale, St Albans, North Hertfordshire, Three Rivers, Watford, Welwyn Hatfield, Luton, Stevenage, Bedford, Central Bedfordshire
+Community 28: Cambridge, East Cambridgeshire, Huntingdonshire, South Cambridgeshire, Forest Heath
+Community 29: Breckland, Broadland, Great Yarmouth, King's Lynn and West Norfolk, North Norfolk, Norwich, South Norfolk, Waveney
+Community 30: Babergh, Ipswich, Mid Suffolk, St Edmundsbury, Suffolk Coastal
+Community 31: Maidstone, Swale, Tonbridge and Malling, Tunbridge Wells, Medway
+Community 32: Slough, Windsor and Maidenhead, Chiltern, South Bucks, Wycombe
+Community 33: Reading, Wokingham, Basingstoke and Deane, Surrey Heath, Hart, Rushmoor, Bracknell Forest, West Berkshire
+Community 34: Adur, Worthing, Brighton and Hove, Lewes
+Community 35: East Hampshire, Fareham, Portsmouth, Gosport, Havant
+Community 36: Wealden, Eastbourne
+Community 37: Rother, Hastings
+Community 38: Eastleigh, Southampton, Isle of Wight, New Forest, Test Valley, Winchester
+Community 39: Dover, Shepway, Thanet, Ashford, Canterbury
+Community 40: Cherwell, Oxford, South Oxfordshire, Vale of White Horse, West Oxfordshire
+Community 41: Arun, Chichester
+Community 42: Crawley, Horsham, Mid Sussex
+Community 43: Bath and North East Somerset, Bristol, Sedgemoor, Wiltshire, North Somerset, South Gloucestershire, Taunton Deane, South Somerset, West Somerset, Swindon, Mendip
+Community 44: West Devon, Cornwall, Plymouth, South Hams
+Community 45: Christchurch, East Dorset, North Dorset, Purbeck, Bournemouth, Poole
+Community 46: Teignbridge, Torbay, East Devon, Exeter, Mid Devon
+Community 47: Torridge, North Devon
+Community 48: Weymouth and Portland, West Dorset
+Community 49: Cheltenham, Cotswold, Forest of Dean, Gloucester, Stroud, Tewkesbury
+Community 50: Isle of Anglesey, Gwynedd
+Community 51: Ceredigion, Pembrokeshire, Carmarthenshire, Swansea, Neath Port Talbot
+Community 52: Bridgend, The Vale of Glamorgan, Cardiff, Rhondda Cynon Taf, Caerphilly, Blaenau Gwent, Torfaen, Monmouthshire, Newport, Merthyr Tydfil
+Community 53: Eilean Siar
+Community 54: Orkney Islands
+Community 55: Shetland Islands
+Community 56: Highland, Moray, Aberdeen City, Aberdeenshire
+Community 57: Falkirk, Fife, Midlothian, Perth and Kinross, Scottish Borders, Stirling, City of Edinburgh, West Lothian, Clackmannanshire, East Lothian
+Community 58: Angus, Dundee City
+Community 59: Inverclyde, North Ayrshire, South Ayrshire, South Lanarkshire, Argyll and Bute, Renfrewshire, West Dunbartonshire, North Lanarkshire, East Dunbartonshire, Glasgow City, East Ayrshire, East Renfrewshire
