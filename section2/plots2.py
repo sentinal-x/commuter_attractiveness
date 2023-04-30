@@ -4,32 +4,29 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scaling import analysis
 
-final_data = pd.read_csv('final_data.csv')
+commute = pd.read_csv('sorted_data.csv')
+population = pd.read_csv('population_sorted.csv')
+merge = commute.merge(population, left_on='Local Authority', right_on='Local Authority', how='inner')
 
 # Attractiveness
-a = final_data['Attractiveness'].tolist()
+c_in = merge['c_in'].tolist()
 # Population
-p = final_data['Population'].tolist()
+c_stay = merge['c_stay'].tolist()
 # Inbound Commuters
-inbound = final_data['c_in'].tolist()
+c_out = merge['c_out'].tolist()
+
+resident_workforce = (merge['c_stay'] + merge['c_out']).tolist()
+
 # Commute Impact Factor (a x p)
-cif = (final_data['Attractiveness'] * final_data['Population']).tolist()
+p = merge['Population'].tolist()
 
-x_values = [('Attractiveness', a),('Population', p),('Inbound Commuters', inbound),('Commute Impact Factor (a x p)',cif)]
-
-cda = final_data['Criminal Damage and Arson'].tolist()
-cod = final_data['Crimes Of Dishonesty'].tolist()
-so = final_data['Sexual Offences'].tolist()
-vio = final_data['Violence'].tolist()
-oc = final_data['Other'].tolist()
-total = final_data['Total'].tolist()
-
-y_values = [('Criminal Damage and Arson', cda), ('Crimes Of Dishonesty', cod), ('Sexual Offences', so), ('Violence', vio), ('Other Crimes', oc), ('Total Crimes', total)]
+y_values = [('Visitor Workforce (C_in)', c_in), ('C_stay', c_stay), ('C_out', c_out), ('Resident Workforce', resident_workforce)]
 key = pd.read_csv('relationship_key.csv')
-i = 0
-for x in x_values:
+
+i = 24
+for x in [p]:
     for y in y_values:
-        data_xy = (x[1], y[1])
+        data_xy = (x, y[1])
         data_xy = np.array(data_xy)
         rmodel = key.loc[i, 'best_model']
         relationship = key.loc[i, 'relationship']
@@ -50,7 +47,7 @@ for x in x_values:
         plt.xscale('log')
         plt.yscale('log')
         plt.ylabel(y[0])
-        plt.xlabel(x[0])
+        plt.xlabel('Population')
         plt.title(relationship)
 
         plt.show()

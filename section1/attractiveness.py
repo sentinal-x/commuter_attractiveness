@@ -10,20 +10,25 @@ rowsums = []
 for i in range(1, len(data)):
     row_sum = 0
     for j in range(1, len(data)):
-        row_sum += int(data[i][j])
+        if i != j: 
+            row_sum += int(data[i][j])
     rowsums.append(row_sum)
 
 threshold = 100
 colsums = []
+c_stay = []
 diversity = [0] * len(data)
 for i in range(1, len(data)):
     col_sum = 0
     for j in range(1, len(data)):
-        if i != j:
-            commuters = int(data[j][i])
+        commuters = int(data[j][i])
+        if i != j:   
             col_sum += commuters
             if commuters > threshold:
                 diversity[i] += 1
+        else:
+            c_stay.append(commuters)
+
     colsums.append(col_sum)
 
 a_list = []
@@ -32,9 +37,9 @@ for val in range(len(colsums)):
     a = colsums[val]/rowsums[val]
     a_list.append(a)
     name = data[val + 1][0]
-    dataframe.append([name, a, colsums[val], rowsums[val], diversity[val]])
+    dataframe.append([name, a, colsums[val], c_stay[val], rowsums[val], diversity[val]])
 
-df = pd.DataFrame(dataframe, columns=['Local Authority', 'Attractiveness', 'c_in', 'c_stay + c_out', 'Diversity'])
+df = pd.DataFrame(dataframe, columns=['Local Authority', 'Attractiveness', 'c_in', 'c_stay', 'c_out', 'Diversity'])
 
 # Create scatter plot of Total against Attractiveness
 plt.scatter(df['Diversity'], df['Attractiveness'])

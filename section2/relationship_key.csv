@@ -23,3 +23,7 @@ key,relationship,best_model
 21,Commute Impact Factor (a x p) against Violence,lognormal_delta_fixed
 22,Commute Impact Factor (a x p) against Other Crimes,lognormal_delta_fixed
 23,Commute Impact Factor (a x p) against Total Crimes,lognormal_delta_fixed
+24,Population against Inbound Commuters,lognormal_delta_fixed
+25,Population against c_stay,gaussian_beta_fixed
+26,Population against c_out,gaussian_beta_fixed
+27,Population against Resident Workforce,gaussian_beta_fixed
