@@ -13,13 +13,13 @@ key,relationship,best_model
 11,Population against Total Crimes,lognormal_delta_fixed
 12,Inbound Commuters against Criminal Damage and Arson,lognormal_delta_fixed
 13,Inbound Commuters against Crimes Of Dishonesty,lognormal_delta_fixed
-14,Inbound Commuters against Sexual Offences,lognormal_delta_fixed
-15,Inbound Commuters against Violence,lognormal_delta_fixed
+14,Inbound Commuters against Sexual Offences,lognormal
+15,Inbound Commuters against Violence,lognormal
 16,Inbound Commuters against Other Crimes,lognormal_delta_fixed
 17,Inbound Commuters against Total Crimes,lognormal_delta_fixed
 18,Commute Impact Factor (a x p) against Criminal Damage and Arson,lognormal_delta_fixed
 19,Commute Impact Factor (a x p) against Crimes Of Dishonesty,lognormal_delta_fixed
-20,Commute Impact Factor (a x p) against Sexual Offences,lognormal_delta_fixed
+20,Commute Impact Factor (a x p) against Sexual Offences,lognormal
 21,Commute Impact Factor (a x p) against Violence,lognormal_delta_fixed
 22,Commute Impact Factor (a x p) against Other Crimes,lognormal_delta_fixed
 23,Commute Impact Factor (a x p) against Total Crimes,lognormal_delta_fixed
@@ -27,3 +27,9 @@ key,relationship,best_model
 25,Population against c_stay,gaussian_beta_fixed
 26,Population against c_out,gaussian_beta_fixed
 27,Population against Resident Workforce,gaussian_beta_fixed
+28,Resident Commuters against Criminal Damage and Arson,lognormal_delta_fixed_beta_fixed
+29,Resident Commuters against Crimes Of Dishonesty,lognormal_delta_fixed
+30,Resident Commuters against Sexual Offences,lognormal_delta_fixed
+31,Resident Commuters against Violence,gaussian
+32,Resident Commuters against Other Crimes,lognormal_delta_fixed
+33,Resident Commuters against Total Crimes,lognormal_delta_fixed

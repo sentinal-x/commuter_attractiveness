@@ -20,6 +20,8 @@ a = final_data['Attractiveness'].tolist()
 p = final_data['Population'].tolist()
 # Inbound Commuters
 inbound = final_data['c_in'].tolist()
+# Resident Commuters
+resident = final_data['c_stay + c_out'].tolist()
 # Commute Impact Factor (a x p)
 cif = (final_data['Attractiveness'] * final_data['Population']).tolist()
 
@@ -34,9 +36,9 @@ total = final_data['Total'].tolist()
 
 y_values = [('Criminal Damage and Arson', cda), ('Crimes Of Dishonesty', cod), ('Sexual Offences', so), ('Violence', vio), ('Other Crimes', oc), ('Total Crimes', total)]
 
-i = 0
+i = 28
 key = []
-for x in x_values:
+for x in [('Resident Commuters', resident)]:
     for y in y_values:
         data_xy = (x[1], y[1])
         relationship = (x[0]+' against '+y[0])
@@ -71,4 +73,4 @@ for x in x_values:
         i += 1
 
 key_df = pd.DataFrame(key)
-key_df.to_csv('relationship_key.csv', index=False)
+key_df.to_csv('relationship_key2.csv', index=False)
