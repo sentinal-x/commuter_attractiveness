@@ -34,7 +34,7 @@ for i in range(1, len(data)):
 a_list = []
 dataframe = []
 for val in range(len(colsums)):
-    a = colsums[val]/rowsums[val]
+    a = colsums[val]/(rowsums[val] + c_stay[val])
     a_list.append(a)
     name = data[val + 1][0]
     dataframe.append([name, a, colsums[val], c_stay[val], rowsums[val], diversity[val]])
@@ -42,12 +42,12 @@ for val in range(len(colsums)):
 df = pd.DataFrame(dataframe, columns=['Local Authority', 'Attractiveness', 'c_in', 'c_stay', 'c_out', 'Diversity'])
 
 # Create scatter plot of Total against Attractiveness
-plt.scatter(df['Diversity'], df['Attractiveness'])
+plt.scatter(df['Attractiveness'], df['Diversity'])
 
 # Add axis labels and title
-plt.xlabel('Diversity')
-plt.ylabel('Attractiveness')
-plt.title('Diversity vs Attractiveness')
+plt.ylabel('Diversity')
+plt.xlabel('Attractiveness')
+plt.title('Attractiveness vs Diversity')
 
 # Display the plot
 plt.show()
@@ -56,12 +56,12 @@ df_sorted = df.sort_values(by='Local Authority')
 population = pd.read_csv('population_sorted.csv')
 merge = df_sorted.merge(population, left_on='Local Authority', right_on='Local Authority', how='inner')
 
-plt.scatter(merge['Diversity'], merge['Attractiveness'] * merge['Population'])
+plt.scatter(merge['Population'], merge['Diversity'])
 
 # Add axis labels and title
-plt.xlabel('Diversity')
-plt.ylabel('Attractiveness x Population')
-plt.title('Diversity vs Attractiveness x Population')
+plt.ylabel('Diversity')
+plt.xlabel('Population')
+plt.title('Population vs Diversity')
 
 # Display the plot
 plt.show()
