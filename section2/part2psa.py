@@ -25,7 +25,7 @@ resident = final_data['c_stay + c_out'].tolist()
 # Commute Impact Factor (a x p)
 cif = (final_data['Attractiveness'] * final_data['Population']).tolist()
 
-x_values = [('Attractiveness', a),('Population', p),('Inbound Commuters', inbound),('Commute Impact Factor (a x p)',cif)]
+x_values = [('Attractiveness', a),('Population', p),('Inbound Commuters', inbound),('Commute Impact Factor (a x p)',cif),('Resident Commuters', resident)]
 
 cda = final_data['Criminal Damage and Arson'].tolist()
 cod = final_data['Crimes Of Dishonesty'].tolist()
@@ -36,9 +36,9 @@ total = final_data['Total'].tolist()
 
 y_values = [('Criminal Damage and Arson', cda), ('Crimes Of Dishonesty', cod), ('Sexual Offences', so), ('Violence', vio), ('Other Crimes', oc), ('Total Crimes', total)]
 
-i = 28
+i = 0
 key = []
-for x in [('Resident Commuters', resident)]:
+for x in x_values:
     for y in y_values:
         data_xy = (x[1], y[1])
         relationship = (x[0]+' against '+y[0])
@@ -71,6 +71,8 @@ for x in [('Resident Commuters', resident)]:
         best_model = sorted_df.loc[0, 'Model']
         key.append({'key': str(i), 'relationship': relationship, 'best_model': best_model})
         i += 1
+        if i == 24:
+            i = 28
 
 key_df = pd.DataFrame(key)
 key_df.to_csv('relationship_key2.csv', index=False)
